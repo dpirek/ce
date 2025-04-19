@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Example</title>
+</head>
+<body>
+
+  <script type="module">
+    import { createElement as ce } from '../../../src/createElement.js';
+
+    const appStyle = {
+      fontFamily: 'Arial, sans-serif',
+      fontSize: '16px',
+      color: '#333',
+    };
+
+    const style = {
+      ...appStyle,
+      backgroundColor: 'lightblue',
+      color: 'darkblue',
+      fontSize: '20px',
+      padding: '20px',
+      borderRadius: '5px',
+      textAlign: 'center',
+    };
+
+    const header = ce('div', { 
+      id: 'app',
+      style: {...style},
+      innerText: 'Hello, World!'
+    });
+
+    document.body.appendChild(header);
+  </script>
+</body>
+</html>
